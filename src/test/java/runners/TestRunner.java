@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
                     "pretty",
                     "html:target/cucumber-report.html"
             },
-            dryRun = true,
+            dryRun = false,
             tags = ""
     )
     public class TestRunner extends AbstractTestNGCucumberTests {
