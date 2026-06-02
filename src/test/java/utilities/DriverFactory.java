@@ -17,7 +17,9 @@ public class DriverFactory {
             playwright = Playwright.create();
 
             BrowserType.LaunchOptions options = new BrowserType.LaunchOptions()
-                    .setHeadless(headless);
+                    .setHeadless(headless)
+                    .setSlowMo(1000);
+            // for maximizing the screen, I used the browser context viewport size //39-40
 
             switch (browserName.toLowerCase()) {
                 case "chromium":
@@ -33,7 +35,10 @@ public class DriverFactory {
                     throw new RuntimeException("Unsupported browser: " + browserName);
             }
 
-            context = browser.newContext();
+            context = browser.newContext(
+                   new Browser.NewContextOptions()
+                            .setViewportSize(1920, 1080)      //for maximizing the screen
+            );
             page = context.newPage();
         }
 

@@ -9,6 +9,7 @@ public class HomePageStepDefs {
 
     HomePage homePage = new HomePage();
 
+  //  @homepage @TC_001
     @Given("user opens the home page")
     public void user_opens_the_home_page() {
         homePage.openPage();
