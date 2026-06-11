@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>BrightHelp Customer Support Center</title>
+
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          font-size: 16px;
+          line-height: 1.6;
+          font-family: Arial, sans-serif;
+          background: linear-gradient(to right, #8ec5fc, #e0c3fc);
+        }
+
+        .container {
+          margin: 40px auto;
+          padding: 30px;
+          max-width: 700px;
+          background: white;
+          border: 1px solid #ccc;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+          text-align: center;
+        }
+
+        h1 {
+          font-size: 36px;
+          font-weight: bold;
+          color: #333;
+        }
+
+        h2 {
+          font-size: 24px;
+          color: #444;
+        }
+
+        p {
+          font-size: 16px;
+          color: #555;
+        }
+
+        .highlight {
+          color: #6a4cff;
+          font-weight: bold;
+        }
+
+        form {
+          margin-top: 20px;
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          padding: 10px;
+          margin: 10px 0;
+          border: 1px solid #aaa;
+        }
+
+        button {
+          padding: 12px;
+          background: #6a4cff;
+          color: white;
+          border: none;
+          font-weight: bold;
+          transition: 0.3s;
+        }
+
+        button:hover {
+          background: #4b2fcc;
+        }
+
+        img {
+          width: 100%;
+          border: 1px solid #ddd;
+        }
+
+        .creator {
+          text-align: center;
+          font-size: 14px;
+          color: #777;
+          margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1>BrightHelp Customer Support Center</h1>
+
+    <h2>Your help starts here</h2>
+
+    <p>
+        Welcome to <strong>BrightHelp</strong>. Our
+        <span class="highlight">support team</span> is ready to help you with
+        any questions.
+    </p>
+
+    <hr />
+
+    <img
+            src="https://images.unsplash.com/photo-1551434678-e076c223a692"
+            alt="Customer support team"
+    />
+
+    <p>
+        Need help with your account? Please <em>contact our team</em> using the
+        form below.
+    </p>
+
+    <br />
+
+    <div>
+        <h2>Contact Form</h2>
+
+        <form>
+            <input id="name" type="text" placeholder="Your Name" />
+
+            <input id="email" type="email" placeholder="Your Email" />
+
+            <textarea id="message" placeholder="Your Message"></textarea>
+
+            <button id="submitBtn">Send Message</button>
+        </form>
+    </div>
+
+    <br />
+
+    <div>
+        <h2>Member Login</h2>
+
+        <input id="loginEmail" type="email" placeholder="Email" />
+
+        <input id="password" type="password" placeholder="Password" />
+
+        <button id="loginBtn">Login</button>
+    </div>
+
+    <hr />
+
+    <p>
+        Learn more about our services at
+        <a href="https://www.shecodes.io" target="_blank">our website</a>.
+    </p>
+
+    <hr />
+
+    <p class="creator">
+        Page created by <strong>Musabekhon Ishanova</strong> for the SheCodes
+        Basics project.
+    </p>
+</div>
+
+<script>
+    let submitButton = document.querySelector("#submitBtn");
+
+    submitButton.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      let name = document.querySelector("#name").value;
+      let email = document.querySelector("#email").value;
+      let message = document.querySelector("#message").value;
+
+      let user = prompt("Please confirm your name");
+
+      if (name === "" || email === "" || message === "") {
+        alert("Please fill all fields before submitting.");
+      } else {
+        alert("Thank you " + user + "! Your message has been sent.");
+
+        document.querySelector("#name").value = "";
+        document.querySelector("#email").value = "";
+        document.querySelector("#message").value = "";
+      }
+    });
+
+    let loginButton = document.querySelector("#loginBtn");
+
+    loginButton.addEventListener("click", function () {
+      let email = document.querySelector("#loginEmail").value;
+      let password = document.querySelector("#password").value;
+
+      if (email === "" || password === "") {
+        alert("Please enter your email and password before logging in.");
+      } else if (password.length < 6) {
+        alert("Password must be at least 6 characters.");
+      } else {
+        alert("Login successful!");
+      }
+    });
+</script>
+</body>
+</html>
