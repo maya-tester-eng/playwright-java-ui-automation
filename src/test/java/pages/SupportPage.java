@@ -47,5 +47,17 @@ import utilities.DriverFactory;
         public String getAlertMessage() {
             return alertMessage;
         }
+//@support TC 003
+        public String getNameValue() {
+            return page.locator(nameInput).inputValue();
+        }
+
+        public String getEmailValue() {
+            return page.locator(emailInput).inputValue();
+        }
+
+        public String getMessageValue() {
+            return page.locator(messageTextarea).inputValue();
+        }
     }
 

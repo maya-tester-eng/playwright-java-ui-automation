@@ -45,7 +45,26 @@ public class SupportStepDefs {
     @Then("user should see support alert message {string}")
     public void user_should_see_support_alert_message(String expectedMessage) {
         String actualMessage = supportPage.getAlertMessage();
-        Assert.assertEquals(actualMessage,expectedMessage);
+        Assert.assertEquals(actualMessage, expectedMessage);
+    }
+
+        // @support @regression @TC_003
+        // Scenario: Verify fields are cleared after successful submission
+
+
+    @Then("support name field should be empty")
+    public void support_name_field_should_be_empty() {
+        Assert.assertEquals(supportPage.getNameValue(), "");
+    }
+
+    @Then("support email field should be empty")
+    public void support_email_field_should_be_empty() {
+Assert.assertEquals(supportPage.getEmailValue(), "");
+    }
+
+    @Then("support message field should be empty")
+    public void support_message_field_should_be_empty() {
+Assert.assertEquals(supportPage.getMessageValue(), "");
     }
 
 
