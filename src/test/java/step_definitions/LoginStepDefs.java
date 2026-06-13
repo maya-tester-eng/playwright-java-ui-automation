@@ -7,9 +7,10 @@ import pages.LoginPage;
 
 public class LoginStepDefs {
 
+    LoginPage loginPage = new LoginPage();
 
-   // @login @TC_001
-   LoginPage loginPage = new LoginPage();
+    // @login @TC_001
+    // Scenario: Verify user can login with valid credentials
 
     @When("user enters login email {string}")
     public void user_enters_login_email(String email) {
@@ -33,9 +34,13 @@ public class LoginStepDefs {
     }
 
     // @login @TC_002
-
-
+    // Scenario: Verify password length validation
 
     // @login @TC_003
+    // Scenario: Verify empty username/password validation
+
+    //THE PERFECT EXAMPLE OF CODE REUSABILITY
+    // three scenario, with the same steps to verify but different input
+    // since steps are repeating, ONLY one step_defs code we need )))))
 
 }
