@@ -11,7 +11,7 @@ import io.cucumber.testng.CucumberOptions;
                     "html:target/cucumber-report.html"
             },
             dryRun = false,
-            tags = "@login"
+            tags = "@support"
     )
     public class TestRunner extends AbstractTestNGCucumberTests {
     }
