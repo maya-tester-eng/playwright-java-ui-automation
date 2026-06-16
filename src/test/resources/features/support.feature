@@ -17,7 +17,6 @@ Feature: Support form
 
   @support @regression @TC_003
   Scenario: Verify fields are cleared after successful submission
-
     Given user opens the home page
     When user enters support name "Maya"
     And user enters support email "maya@test.com"
